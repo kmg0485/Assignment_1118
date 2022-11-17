@@ -1,0 +1,25 @@
+{% load template_util %}
+{% get_database_info as database_info %}
+{% get_request_info as request_info %}
+{% get_wsgi_info as wsgi_info %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>timeattack</title>
+</head>
+
+<body>
+  <div class="title">
+    hello world!!
+  </div></br>
+  <div>연결된 데이터베이스 : {{ database_info }}</div>
+  <div>접속 경로 : {{ request_info }}</div>
+  <div>프로젝트 실행 명령어 : {{ wsgi_info }}</div>
+</body>
+
+</html>
